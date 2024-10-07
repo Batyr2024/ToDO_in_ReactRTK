@@ -1,5 +1,5 @@
 export interface Task {
     id?:number,
     text: string,
-    isChecked?: boolean,
+    checked?: boolean,
 }

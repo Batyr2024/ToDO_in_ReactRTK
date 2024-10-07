@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
 import { fetchAddTasks } from '../../store/actions/asyncThunk'
 import './head.css'
+import { Button, Checkbox, FormControlLabel, FormGroup } from '@mui/material'
 
 export const Head = () => {
   const dispatch = useAppDispatch()
@@ -23,16 +24,15 @@ export const Head = () => {
           }}
           maxLength={100}
         ></textarea>
-        <button id="buttonAdd" onClick={buttonAddClick}>
+        <Button variant="contained" onClick={buttonAddClick}>
           ADD
-        </button>
+        </Button>
       </div>
       <div className="head_2">
-        <div className="head_2__input">
-          <input type="checkbox" id="checkboxAll" />
-          <p>CHECK ALL</p>
-        </div>
-        <button id="buttonDeleteAll">DELETE</button>
+        <FormGroup>
+          <FormControlLabel control={<Checkbox />} label="ALL Check" />
+        </FormGroup>
+        <Button variant="contained">DELETE</Button>
       </div>
     </>
   )

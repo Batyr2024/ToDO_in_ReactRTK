@@ -1,0 +1,12 @@
+.tasksList{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    
+}
